@@ -41,9 +41,9 @@ result = mod(result, mod_value);
 disp('Final resulting polynomial coefficients (mod 13 applied):');
 disp(result);
 
-% Dividing by x^(n+1) + 1
+% Dividing by x^(n+1)
 n = length(result) - 2;  % Degree of the final result is length(result) - 1
-divisor = [1, zeros(1, n+1)];  % This represents x^(n+1) + 1
+divisor = [1, zeros(1, n+1)];  % This represents x^(n+1) 
 
 % Polynomial division
 [quotient, remainder] = deconv(result, divisor);
