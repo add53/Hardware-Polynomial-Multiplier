@@ -37,50 +37,97 @@
         a {
             color: #3498db;
         }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Capstone Project: [Your Project Title]</h1>
-    <p>[Your Name]</p>
+    <h1>Hardware Design for Post-Quantum Cryptography Polynomial
+        Multiplier</h1>
 </header>
 
 <section>
     <h2>Project Overview</h2>
-    <p>Provide a brief introduction to your capstone project. What problem are you solving? What is the project's scope?</p>
+    <p>...</p>
+</section>
+
+<section>
+    <h2>Team</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <h3>Aiden Harper</h3>
+            <p>Computer Engineering</p>
+            <img src="/pictures/agh_headshot.jpg" alt="AGH Headshot">
+        </div>
+        <div class="team-member">
+            <h3>Caleb Carnes</h3>
+            <p>Computer Engineering</p>
+            <img src="/pictures/x_headshot.jpg" alt="">
+        </div>
+        <div class="team-member">
+            <h3>Sierra Choate</h3>
+            <p>Electrical Engineering</p>
+            <img src="/pictures/x_headshot.jpg" alt="">
+        </div>
+        <div class="team-member">
+            <h3>Jinming Hua</h3>
+            <p>Role: [Description of Role]</p>
+            <img src="/pictures/x_headshot.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Sponsor</h2>
+    <p>Sponsored by: Dr. Tuy Nguyen</p>
+    <p>...</p>
 </section>
 
 <section>
     <h2>Goals</h2>
     <ul>
-        <li>Goal 1: [Describe first goal]</li>
-        <li>Goal 2: [Describe second goal]</li>
-        <li>Goal 3: [Describe third goal]</li>
+        <li>Understand NTT multiplier, verify existing NTT multiplier on software (Python/C/C++/Julia).</li>
+        <li>Complete Verilog/SystemVerilog code to perform NTT polynomial multiplication on Xilinx Vivado.</li>
+        <li>Complete parallel NTT multiplier on Xilinx Vivado and/or propose solutions to improve NTT multiplier.</li>
     </ul>
 </section>
 
 <section>
-    <h2>Technologies Used</h2>
-    <ul>
-        <li>[Technology 1]</li>
-        <li>[Technology 2]</li>
-        <li>[Technology 3]</li>
-    </ul>
+    <h2>Design Overview</h2>
+    <h3>Block Diagrams</h3>
+    <!-- <img src="block_diagram.png" alt="Block Diagram" style="max-width:100%; height:auto;"> -->
 </section>
 
-<section>
-    <h2>Project Links and References</h2>
-    <p>Link to the project repository or any relevant references:</p>
-    <ul>
-        <li><a href="https://github.com/your-repository">GitHub Repository</a></li>
-        <li><a href="https://www.example.com">Project Documentation</a></li>
-    </ul>
-</section>
-
-<footer>
-    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
-</footer>
+<a href="https://github.com/your-repository" class="button">View Project on GitHub</a>
 
 </body>
 </html>
