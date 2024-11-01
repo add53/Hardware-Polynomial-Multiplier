@@ -30,16 +30,50 @@
 </section>
 
 <section>
-    <h3>NTT (Number Theorteic Transform)</h3>
+    <h3>Design Workflow Diagram</h3>
+    <p>
+        Here is our design workflow diagram for the project. We need to build software implentations for verification.
+        Then, we need to build the hardware design, using the NTT and other optimization methods.
+    </p>
+    <img src="pictures/capstone_design.jpg" alt="Block Diagram" 
+        style="width: 60%; max-width: 600px; margin: 20px auto; display: block; border: 2px solid #ddd; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+</section>
+
+<section>
+    <h3>NTT (Number Theoretic Transform)</h3>
     <p>
         The Number Theoretic Transform (NTT) is a very efficient method of performing polynomial 
         multiplication by performing a discrete fourier transform over a polynomial ring.
         This reduces the number of individual multiplications that need to be performed.
     </p>
+
+    <h4>Cooley-Tukey Butterfly (Fast-Fourier Transform)</h4>
+    <p>
+        The NTT transforms two polynomials to the frequency-domain, 
+        where they can be pointwise multiplied, and transformed back to the time-domain using the INTT, 
+        yielding the result of the polynomial multiplication. 
+        This transformation is optimized using a Fast-Fourier Transform (FFT) algorithm, the Cooley-Tukey 
+        butterfly in our case. To use this algorithm for the NTT, modular arithmetic is performed after each step to 
+        ensure the results are kept within a finite field.
+    </p>
+    <img src="./pictures/design_images/butterfly_graphic.png" alt="Butterfly Graphic"
+        style="width: 60%; max-width: 600px; margin: 20px auto; display: block; border: 2px solid #ddd; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
 </section>
 
 <section>
-    <h3>Design Workflow Diagram</h3>
-    <img src="pictures/capstone_design.jpg" alt="Block Diagram" 
+    <h3>Current Progress</h3>
+
+    <p>
+        Shown here is the development of the SystemVerilog code for the NTT. 
+        We started by creating a butterfly unit that takes two inputs and performs the Cooley-Tukey FFT 
+        algorithm using modular arithmetic. Then, we used this butterfly module to create a 4 input NTT module. 
+        This was accomplished by creating 4 instances of the butterfly module and reorganizing the inputs and outputs. 
+        For our final design, we are working on creating a module that can change input sizes with the use of a parameter. 
+        This is a similar concept to the 4 input design but it uses a for loop.
+    </p>
+
+    <img src="./pictures/design_images/butterfly_rtl.png" alt="Butterfly RTL"
+        style="width: 60%; max-width: 600px; margin: 20px auto; display: block; border: 2px solid #ddd; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./pictures/design_images/ntt_4_block_diagram.png" alt="4-Input NTT Block Diagram"
         style="width: 60%; max-width: 600px; margin: 20px auto; display: block; border: 2px solid #ddd; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
 </section>
