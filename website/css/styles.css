@@ -76,26 +76,60 @@ ul {
 .team-grid {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .team-member {
-    flex: 1;
-    margin: 10px;
-    padding: 10px;
-    background-color: #eaeaea;
-    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member p i {
+    font-style: italic;
+    color: #666;
+}
+
+.team-member p:first-of-type {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
 .team-member img {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
+
+/* Bio Paragraph Styling */
+.team-member p:last-of-type {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.4;
+}
+
 
 section.sponsor h2 {
     text-align: left;
@@ -117,12 +151,33 @@ section.sponsor {
     border-radius: 5px;
 }
 
+.sponsor-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-box h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sponsor-box p i {
+    font-style: italic;
+    color: #666;
+}
+
+.sponsor-box p:first-of-type {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
 .sponsor-image {
     width: 175px;
     height: 175px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--primary-color);
     display: inline-block;
     margin-right: 15px;
     vertical-align: top;
